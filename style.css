@@ -1,0 +1,105 @@
+html {
+    background-color: #E5E8E5;
+}
+div {
+    position: relative;
+}
+.bord1 {
+    background-color: #86A1BC;
+    width: 1150px;
+    height: 10px;
+    top: 50px;
+    left: 175px;
+}
+.bord2 {
+    background-color: #86A1BC;
+    width: 10px;
+    height: 950px;
+    left: 0px;
+}
+.bord3 {
+    background-color: #86A1BC;
+    width: 10px;
+    height: 950px;
+    left: 1150px;
+}
+.bord4 {
+    background-color: #86A1BC;
+    width: 1160px;
+    height: 10px;
+    top: 950px;
+    left: -1150px;
+}
+.gallery {
+    background-color: #86A1BC;
+    width: 1100px;
+    height: 900px;
+    left: 30px;
+    top: -920px;
+}
+img {
+    position: relative;
+}
+.img1{    
+    width: 270px;
+    height: 300px;   
+    left: 10px;
+    top: -300px;
+}
+
+.img2{   
+    width: 275px;
+    height: 610px;    
+    left: 20px;
+    top: 10px;
+}
+ 
+.img3{
+    width: 505px;
+    height: 300px;
+    left: 30px;
+    top: -300px;
+}
+.img4{  
+    width: 269px;
+    height: 301px;
+    left: 10px;
+    top: -295px;
+}
+.img5{
+    width: 230px;
+    height: 300px;
+    top: -295px;
+    left: 310px;
+}
+.img6{
+    width: 265px;
+    height: 300px;
+    left: 315px;
+    top: -295px;
+}
+.img7{
+     
+    width: 270px;
+    height: 260px;
+    left: -765px;
+    top: -25px;
+}
+.img8{
+    width: 275px;
+    height: 260px;
+    top: -289px;
+    left: 290px;
+}
+.img9{
+    width: 505px;
+    height: 260px;
+    left: 305px;
+    top: -290px;
+}
+.footer {
+    background-color: #86A1BC;
+    width: 1150px;
+    height: 50px;
+    top: -725px;
+}
