@@ -12,15 +12,56 @@
     <div class="bord3">
     <div class="bord4">
     <div class="gallery">
-        <img class="img1" src="./images/Remembering Rock Icon Chris Cornell's Life in Photos, 6 Years After His Death.jpg">
-        <img class="img2" src="./images/Chris Cornell.jpg">
-        <img class="img3" src="http://mediad.publicbroadcasting.net/p/shared/npr/styles/x_large/nprshared/201705/529013874.jpg">
-        <img class="img4" src="./images/588e0c37-a8e5-40d5-a0f7-2a51228f702b.jpg">
-        <img class="img5" src="./images/we sing blue silver.jpg">
-        <img class="img6" src="./images/chris cornell😫.jpg">
-        <img class="img7" src="./images/af1013a4-6ac2-4109-8607-95f9254bf379.jpg">
-        <img class="img8" src="./images/ahhhhhh.jpg">
-        <img class="img9" src="./images/ahhhhhhhhhhhhhh.jpg">
+        <a href="./images/Remembering Rock Icon Chris Cornell's Life in Photos, 6 Years After His Death.jpg">
+        <img class="img1" src="./images/Remembering Rock Icon Chris Cornell's Life in Photos, 6 Years After His Death.jpg" onclick()="openModal(); currentslide(1)">
+        </a>
+        <a href="./images/Chris Cornell.jpg">
+        <img class="img2" src="./images/Chris Cornell.jpg" onclick="openModal(); currentslide(2)">
+        </a>
+        <a href="http://mediad.publicbroadcasting.net/p/shared/npr/styles/x_large/nprshared/201705/529013874.jpg">
+        <img class="img3" src="http://mediad.publicbroadcasting.net/p/shared/npr/styles/x_large/nprshared/201705/529013874.jpg" onclick()="openModal(); currentslide(3)">
+        </a>
+        <a href="./images/588e0c37-a8e5-40d5-a0f7-2a51228f702b.jpg">
+        <img class="img4" src="./images/588e0c37-a8e5-40d5-a0f7-2a51228f702b.jpg" onclick()="openModal(); currentslide(4)">
+        </a>
+        <a href="./images/we sing blue silver.jpg">
+        <img class="img5" src="./images/we sing blue silver.jpg" onclick()="openModal(); currentslide(5)">
+        </a>
+        <a href="./images/chris cornell😫.jpg">
+        <img class="img6" src="./images/chris cornell😫.jpg" onclick()="openModal(); currentslide(6)">
+        </a>
+        <a href="./images/af1013a4-6ac2-4109-8607-95f9254bf379.jpg">
+        <img class="img7" src="./images/af1013a4-6ac2-4109-8607-95f9254bf379.jpg" onclick()="openModal(); currentslide(7)">
+        </a>
+        <a href="./images/ahhhhhh.jpg">
+        <img class="img8" src="./images/ahhhhhh.jpg" onclick()="openModal(); currentslide(8)">
+        </a>
+        <a href="./images/ahhhhhhhhhhhhhh.jpg">
+        <img class="img9" src="./images/ahhhhhhhhhhhhhh.jpg" onclick()="openModal(); currentslide(9)">
+        </a>
+    </div>
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="img1_wide.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="img2_wide.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="img3_wide.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="img4_wide.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
     </div>
     <div class="footer"></div>
     <script href="ahh.js"></script>
