@@ -4,6 +4,13 @@ html {
 div {
     position: relative;
 }
+.fullScreen{
+    /* display: none; */
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    background-color: aqua;
+}
 .bord1 {
     background-color: #86A1BC;
     width: 1150px;
