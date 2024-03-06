@@ -1,38 +1,72 @@
-var slideIndex = 1;
-// showSlides(slideIndex);
 
-function openModal() {
-    document.getElementById("myModal").style.display = "block";
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const gallery = document.querySelectorAll('.gallery a');
+    let currentIndex = 0;
 
-function closeModal() {
-    document.getElementByClassName("fullscreen")[0].style.display = "none";
-}
+    const lightboxOverlay = document.createElement('div');
+    lightboxOverlay.className = 'lightbox-overlay';
+    document.body.appendChild(lightboxOverlay);
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
+    const lightboxImg = document.createElement('img');
+    lightboxImg.className = 'lightbox-img';
+    lightboxOverlay.appendChild(lightboxImg);
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-function imageLoader(location){
-    //div background to image url
-    document.getElementsByClassName('fullscreen')[0].style.backgroundImage = `url("${location}")`
-    //set display to block 
-    console.log('test')
-    document.getElementsByClassName('fullscreen')[0].style.display = 'block';
-    document.getElementByClassName('fullscreen')[0].style.backgroundSize = 'cover';
-    document.getElementByClassName('fullscreen')[0].style.backgroundSize = 'cover';
-}
+    const prevButton = document.createElement('button');
+    prevButton.innerText = '<';
+    prevButton.className = 'lightbox-nav prev';
+    lightboxOverlay.appendChild(prevButton);
 
-// function showSlides(n) {
-//     var i;
-//     var slides = document.getElementsByClassName("mySlides");
-//     if (n > slides.length) {slideIndex = 1}
-//     if (n < 1) {slideIndex = slides.length}
-//     for (i = 0; i < slides.length; i++) {
-//         slides[i].style.display = "none";
-//     }
-//     slides[slideIndex-1].style.display = "block";
-// }
+    const nextButton = document.createElement('button');
+    nextButton.innerText = '>';
+    nextButton.className = 'lightbox-nav next';
+    lightboxOverlay.appendChild(nextButton);
+
+    function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = gallery[currentIndex].getAttribute('href');
+        lightboxOverlay.style.display = 'flex';
+    }
+
+    function navigatePrev() {
+        if (currentIndex > 0) {
+            openLightbox(currentIndex - 1);
+        } else {
+            openLightbox(gallery.length - 1);
+        }
+    }
+
+    function navigateNext() {
+        if (currentIndex < gallery.length - 1) {
+            openLightbox(currentIndex + 1);
+        } else {
+            openLightbox(0); 
+        }
+    }
+
+    gallery.forEach((item, index) => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            openLightbox(index); 
+        });
+    });
+
+    lightboxOverlay.addEventListener('click', function(e) {
+        if (e.target === lightboxOverlay) {
+            lightboxOverlay.style.display = 'none';
+        }
+    });
+
+    prevButton.addEventListener('click', navigatePrev);
+    nextButton.addEventListener('click', navigateNext);
+    document.addEventListener('keydown', function(e) {
+        if (lightboxOverlay.style.display === 'flex') { 
+            if (e.key === 'ArrowLeft') {
+                navigatePrev();
+            } else if (e.key === 'ArrowRight') {
+                navigateNext();
+            } else if (e.key === 'Escape') {
+                lightboxOverlay.style.display = 'none';
+            }
+        }
+    });
+});
